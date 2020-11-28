@@ -1,3 +1,4 @@
+import ButtonForm from 'core/components/ButtonForm';
 import React from 'react';
 import './styles.scss';
 
@@ -10,9 +11,7 @@ const Home = () => (
                 Este design foi adaptado a partir de Ant Design System for Figma, 
                 de Mateusz Wierzbicki: <span className="home-text-email">antforfigma@gmail.com</span> 
             </p>
-            <button className="home-button">
-                Começar
-            </button>
+            <ButtonForm text="Começar"  />
 
         </div>
     </div>

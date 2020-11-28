@@ -1,0 +1,27 @@
+.btn-form {
+    position: absolute;
+    width: 101px;
+    height: 40px;
+    left: 120px;
+    top: 595px;
+    background: #1890ff;
+    border-radius: 4px;
+    margin-top: 48px;
+    border: none;
+}
+
+.button-text {
+    height: 24px;
+    left: 138px;
+    right: 1237px;
+    top: calc(50% - 24px / 2 + 165px);    
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin: 8px 18px 8px 18px;
+    justify-content: center;
+}
