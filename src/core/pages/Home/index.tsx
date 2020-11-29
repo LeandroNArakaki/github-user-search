@@ -1,5 +1,6 @@
 import ButtonForm from 'core/components/ButtonForm';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.scss';
 
 const Home = () => (
@@ -11,7 +12,9 @@ const Home = () => (
                 Este design foi adaptado a partir de Ant Design System for Figma, 
                 de Mateusz Wierzbicki: <span className="home-text-email">antforfigma@gmail.com</span> 
             </p>
-            <ButtonForm text="Começar"  />
+            <Link to="/search">
+                <ButtonForm text="Começar"  />
+            </Link>
 
         </div>
     </div>
