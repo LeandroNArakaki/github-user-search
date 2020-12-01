@@ -11,6 +11,10 @@ const Search = () => (
             </div>
             <ButtonForm text="Encontrar" />
         </div>
+        <div className="search-found-container">
+
+        </div>
+
     </form>
 );
 
