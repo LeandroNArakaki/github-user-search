@@ -1,8 +1,10 @@
+//Quadro perfil 1
 .search-container {
     margin-top: 54px;
 }
 
 .search-content {
+    position: absolute;
     width: 1251px;
     height: 270px;
     left: 0px;
@@ -22,7 +24,7 @@
     margin: 54px 655px 158px 94px;
 }
 
-.search-input-container{
+.search-input-container {
     left: 0%;
     right: 0%;
     top: 0%;
@@ -45,23 +47,90 @@
 }
 
 .search-container .btn-form {
-     width: 101px;
-     height: 40px;
-     margin: 164px 1056px 42px 94px;
- }
+    width: 101px;
+    height: 40px;
+    margin: 164px 1056px 42px 94px;
+}
 
-
- //Form 2
- .search-found-container{
+//Quadro perfil 2
+.search-found-container {
     margin-top: 54px;
- }
+}
 
- .search-found-content{
+.search-found-content {
+    position: absolute;
     width: 1251px;
     height: 387px;
     left: 0px;
     top: 0px;
-    background: #F5F5F5;
+    background: #f5f5f5;
     border-radius: 8px;
     margin: 440px 99px 73px 90px;
- }
+}
+
+.label-form-repository .label-form-container {
+    width: 163px;
+    height: 22px;
+    left: 0px;
+    top: 0px;
+    margin: 23px 730px 342px 358px;
+}
+
+.label-form-repository .label-text {
+    width: 135px;
+    margin: 1px 14px 1px 14px;
+}
+
+.label-form-followers .label-form-container {
+    width: 118px;
+    height: 22px;
+    top: 0px;
+    margin: 23px 604px 342px 529px;
+}
+
+.label-form-followers .label-text {
+    width: 86px;
+    margin: 1px 18px 1px 14px;
+}
+
+.label-form-following .label-form-container {
+    width: 105px;
+    height: 22px;
+    top: 0px;
+    margin: 24px 505px 343px 655px;
+}
+
+.label-form-following .label-text {
+    width: 86px;
+    margin: 1px 17px 1px 14px;
+}
+
+.search-board-info {
+    position: absolute;
+    width: 870px;
+    height: 247px;
+    left: 0px;
+    top: 0px;
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin: 56px 23px 84px 358px;
+}
+
+.search-board-text-info {
+    width: 534px;
+    height: 28px;
+    left: 14px;
+    top: 8px;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #1890ff;
+    margin: 8px 322px 211px 14px;
+}
+
+.search-board-info .label-board-container {
+    margin: 55px 17px 152px 14px;
+} 
