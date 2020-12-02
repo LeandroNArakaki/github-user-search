@@ -9,6 +9,7 @@ import './styles.scss';
 
 type FormState = {
     name: string;
+    //person:Person;
 }
 
 const Search = () => {
@@ -17,7 +18,7 @@ const Search = () => {
     const [activePage, setActivePage] = useState(0);
 
     const [formData, setFormData] = useState<FormState>({
-        name: ''
+        name: '' 
     });
 
     const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -80,7 +81,7 @@ const Search = () => {
                         </div>
                     </div>
                     <div className="search-board-image">
-
+                        <img src={person?.avatar_url} alt={person?.login} className="search-board-image person-card-image" />
                     </div>
                     <div className="search-board-button">
                         <ButtonForm text="Ver Perfil" />
