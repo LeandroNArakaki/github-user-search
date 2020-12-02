@@ -1,6 +1,7 @@
 import ButtonForm from 'core/components/ButtonForm';
+import { Person } from 'core/types/Person';
 import { makeRequest } from 'core/utils/request';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import LabelBoardInfo from './components/LabelBoardInfo';
 import LabelForm from './components/LabelForm';
 import './styles.scss';
@@ -11,6 +12,9 @@ type FormState = {
 }
 
 const Search = () => {
+    const [person, setPerson] = useState<Person>();
+    const [isLoading, setIsLoading] = useState(false);
+    const [activePage, setActivePage] = useState(0);
 
     const [formData, setFormData] = useState<FormState>({
         name: ''
@@ -19,14 +23,24 @@ const Search = () => {
     const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const name = event.target.name;
         const value = event.target.value;
-
         setFormData(data => ({ ...data, [name]: value }));
     }
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        makeRequest({ url: `users/${formData.name}` });
+
     }
+
+    useEffect(() => {
+        makeRequest({ url: `users/${formData.name}` })
+            .then(response => setPerson(response.data))
+            .finally(() => {
+                setIsLoading(false);
+            });
+    }, [formData.name])
+
+
+
     return (
         <form className="search-container" onSubmit={handleSubmit} >
             <div className="search-content">
@@ -64,18 +78,13 @@ const Search = () => {
                         <div className="search-board-text-member">
                             <LabelBoardInfo text="Membro desde:" />
                         </div>
-                        <div className="search-board-image">
-
-                        </div>
-                        <div className="search-board-button">
-                            <ButtonForm text="Ver Perfil" />
-                        </div>
-
+                    </div>
+                    <div className="search-board-image">
 
                     </div>
-
-
-
+                    <div className="search-board-button">
+                        <ButtonForm text="Ver Perfil" />
+                    </div>
                 </div>
             </div>
         </form>

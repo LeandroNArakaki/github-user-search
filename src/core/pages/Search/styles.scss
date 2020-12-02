@@ -46,10 +46,15 @@
     margin: 112px 481px 106px 94px;
 }
 
-.search-container .btn-form {
-    width: 101px;
-    height: 40px;
+.search-content .btn-form {
     margin: 164px 1056px 42px 94px;
+}
+
+.search-content .btn-text {
+    left: 110px;
+    right: 1072px;
+    top: calc(50% - 24px / 2 + 73px);
+    margin: 8px 16px 8px 16px;
 }
 
 //Quadro perfil 2
@@ -151,15 +156,21 @@
 }
 
 .search-board-image {
-
+    position: absolute;
+    width: 284px;
+    height: 280px;
+    border-color: #1890ff;
+    margin: 23px 937px 84px 30px;
 }
 
 .search-board-button .btn-form {
-    
     margin: 320px 1120px 27px 30px;
+    width: auto;
 }
 
-.search-board-button .btn-text{
-    
-    top: calc(50% - 24px/2 + 146.5px);
+.search-board-button .btn-text {
+    left: 48px;
+    right: 1139px;
+    top: calc(50% - 24px / 2 + 146.5px);
+    margin: 8px 19px 8px 18px;
 }
