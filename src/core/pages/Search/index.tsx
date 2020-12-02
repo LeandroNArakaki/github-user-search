@@ -52,8 +52,24 @@ const Search = () => {
                         <h2 className="search-board-text-info">
                             Informações
                         </h2>
-                        <LabelBoardInfo text="Empresa:" />
-                
+                        <div className="search-board-text-company">
+                            <LabelBoardInfo text="Empresa:" />
+                        </div>
+                        <div className="search-board-text-website">
+                            <LabelBoardInfo text="Website/Blog:" />
+                        </div>
+                        <div className="search-board-text-locality">
+                            <LabelBoardInfo text="Localidade:" />
+                        </div>
+                        <div className="search-board-text-member">
+                            <LabelBoardInfo text="Membro desde:" />
+                        </div>
+                        <div className="search-board-image">
+
+                        </div>
+                        <div className="search-board-button">
+                            <ButtonForm text="Ver Perfil" />
+                        </div>
 
 
                     </div>

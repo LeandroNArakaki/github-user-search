@@ -119,10 +119,9 @@
 }
 
 .search-board-text-info {
+    position: absolute;
     width: 534px;
     height: 28px;
-    left: 14px;
-    top: 8px;
     font-size: 20px;
     line-height: 28px;
     display: flex;
@@ -131,6 +130,36 @@
     margin: 8px 322px 211px 14px;
 }
 
-.search-board-info .label-board-container {
+.search-board-info .search-board-text-company {
+    position: absolute;
     margin: 55px 17px 152px 14px;
-} 
+}
+
+.search-board-info .search-board-text-website {
+    position: absolute;
+    margin: 100px 17px 107px 14px;
+}
+
+.search-board-info .search-board-text-locality {
+    position: absolute;
+    margin: 145px 17px 62px 14px;
+}
+
+.search-board-info .search-board-text-member {
+    position: absolute;
+    margin: 190px 17px 17px 14px;
+}
+
+.search-board-image {
+
+}
+
+.search-board-button .btn-form {
+    
+    margin: 320px 1120px 27px 30px;
+}
+
+.search-board-button .btn-text{
+    
+    top: calc(50% - 24px/2 + 146.5px);
+}
