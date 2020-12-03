@@ -81,7 +81,8 @@ const Search = () => {
                         </div>
                     </div>
                     <div className="search-board-image">
-                        <img src={person?.avatar_url} alt={person?.login} className="search-board-image person-card-image" />
+                        <img className="person-card-image" 
+                            src={person?.avatar_url} alt={person?.login} />
                     </div>
                     <div className="search-board-button">
                         <ButtonForm text="Ver Perfil" />
