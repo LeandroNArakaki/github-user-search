@@ -55,29 +55,29 @@ const Search = () => {
             <div className="search-found-container">
                 <div className="search-found-content">
                     <div className="label-form-repository">
-                        <LabelForm text="Repositórios públicos:" />
+                        <LabelForm text="Repositórios públicos: " value={person?.public_repos} />
                     </div>
                     <div className="label-form-followers">
-                        <LabelForm text="Seguidores:" />
+                        <LabelForm text="Seguidores: "  value={person?.followers} />
                     </div>
                     <div className="label-form-following">
-                        <LabelForm text="Seguindo:" />
+                        <LabelForm text="Seguindo: " value={person?.following} />
                     </div>
                     <div className="search-board-info">
                         <h2 className="search-board-text-info">
                             Informações
                         </h2>
                         <div className="search-board-text-company">
-                            <LabelBoardInfo text="Empresa:" />
+                            <LabelBoardInfo text="Empresa: " value={person?.company} />
                         </div>
                         <div className="search-board-text-website">
-                            <LabelBoardInfo text="Website/Blog:" />
+                            <LabelBoardInfo text="Website/Blog: " value={person?.blog} />
                         </div>
                         <div className="search-board-text-locality">
-                            <LabelBoardInfo text="Localidade:" />
+                            <LabelBoardInfo text="Localidade: " value={person?.location} />
                         </div>
                         <div className="search-board-text-member">
-                            <LabelBoardInfo text="Membro desde:" />
+                            <LabelBoardInfo text="Membro desde: " value={person?.created_at} />
                         </div>
                     </div>
                     <div className="search-board-image">
