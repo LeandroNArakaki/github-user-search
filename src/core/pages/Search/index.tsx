@@ -4,21 +4,22 @@ import { makeRequest } from 'core/utils/request';
 import React, { useEffect, useState } from 'react';
 import LabelBoardInfo from './components/LabelBoardInfo';
 import LabelForm from './components/LabelForm';
+import ImageLoader from './components/Loaders/ImageLoader';
+import InfoLoader from './components/Loaders/InfoLoader';
 import './styles.scss';
 
 
 type FormState = {
     name: string;
-    //person:Person;
 }
 
 const Search = () => {
     const [person, setPerson] = useState<Person>();
     const [isLoading, setIsLoading] = useState(false);
-    const [activePage, setActivePage] = useState(0);
+    //const [activePage, setActivePage] = useState(0);
 
     const [formData, setFormData] = useState<FormState>({
-        name: '' 
+        name: ''
     });
 
     const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -33,6 +34,7 @@ const Search = () => {
     }
 
     useEffect(() => {
+        setIsLoading(true);
         makeRequest({ url: `users/${formData.name}` })
             .then(response => setPerson(response.data))
             .finally(() => {
@@ -54,39 +56,50 @@ const Search = () => {
             </div>
             <div className="search-found-container">
                 <div className="search-found-content">
-                    <div className="label-form-repository">
-                        <LabelForm text="Repositórios públicos: " value={person?.public_repos} />
-                    </div>
-                    <div className="label-form-followers">
-                        <LabelForm text="Seguidores: "  value={person?.followers} />
-                    </div>
-                    <div className="label-form-following">
-                        <LabelForm text="Seguindo: " value={person?.following} />
-                    </div>
-                    <div className="search-board-info">
-                        <h2 className="search-board-text-info">
-                            Informações
-                        </h2>
-                        <div className="search-board-text-company">
-                            <LabelBoardInfo text="Empresa: " value={person?.company} />
-                        </div>
-                        <div className="search-board-text-website">
-                            <LabelBoardInfo text="Website/Blog: " value={person?.blog} />
-                        </div>
-                        <div className="search-board-text-locality">
-                            <LabelBoardInfo text="Localidade: " value={person?.location} />
-                        </div>
-                        <div className="search-board-text-member">
-                            <LabelBoardInfo text="Membro desde: " value={person?.created_at} />
-                        </div>
-                    </div>
-                    <div className="search-board-image">
-                        <img className="person-card-image" 
-                            src={person?.avatar_url} alt={person?.login} />
-                    </div>
-                    <div className="search-board-button">
-                        <ButtonForm text="Ver Perfil" />
-                    </div>
+                    {isLoading ? <InfoLoader /> : (
+                        <>
+                            <div className="label-form-repository">
+                                <LabelForm text="Repositórios públicos: " value={person?.public_repos} />
+                            </div>
+                            <div className="label-form-followers">
+                                <LabelForm text="Seguidores: " value={person?.followers} />
+                            </div>
+                            <div className="label-form-following">
+                                <LabelForm text="Seguindo: " value={person?.following} />
+                            </div>
+                            <div className="search-board-info">
+                                <h2 className="search-board-text-info">
+                                    Informações
+                                </h2>
+                                <div className="search-board-text-company">
+                                    <LabelBoardInfo text="Empresa: " value={person?.company} />
+                                </div>
+                                <div className="search-board-text-website">
+                                    <LabelBoardInfo text="Website/Blog: " value={person?.blog} />
+                                </div>
+                                <div className="search-board-text-locality">
+                                    <LabelBoardInfo text="Localidade: " value={person?.location} />
+                                </div>
+                                <div className="search-board-text-member">
+                                    <LabelBoardInfo text="Membro desde: " value={person?.created_at} />
+                                </div>
+                            </div>
+                        </>
+
+                    )}
+
+                    {isLoading ? <ImageLoader /> : (
+                        <>
+                            <div className="search-board-image">
+                                <img className="person-card-image"
+                                    src={person?.avatar_url} alt={person?.login} />
+                            </div>
+                            <div className="search-board-button">
+                                <ButtonForm text="Ver Perfil" />
+                            </div>
+                        </>
+                    )}
+
                 </div>
             </div>
         </form>
