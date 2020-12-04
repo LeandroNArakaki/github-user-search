@@ -1,6 +1,7 @@
 import ButtonForm from 'core/components/ButtonForm';
 import { Person } from 'core/types/Person';
 import { makeRequest } from 'core/utils/request';
+import dayjs from 'dayjs';
 import React, { useEffect, useState } from 'react';
 import LabelBoardInfo from './components/LabelBoardInfo';
 import LabelForm from './components/LabelForm';
@@ -81,25 +82,24 @@ const Search = () => {
                                     <LabelBoardInfo text="Localidade: " value={person?.location} />
                                 </div>
                                 <div className="search-board-text-member">
-                                    <LabelBoardInfo text="Membro desde: " value={person?.created_at} />
+                                    <LabelBoardInfo text="Membro desde: " value={dayjs(person?.created_at).format('DD/MM/YYYY') } />
                                 </div>
                             </div>
                         </>
 
                     )}
 
-                    {isLoading ? <ImageLoader /> : (
-                        <>
-                            <div className="search-board-image">
+                    <div className="search-board-image ">
+                        {isLoading ? <ImageLoader /> : (
+                            <>
                                 <img className="person-card-image"
                                     src={person?.avatar_url} alt={person?.login} />
-                            </div>
-                            <div className="search-board-button">
-                                <ButtonForm text="Ver Perfil" />
-                            </div>
-                        </>
-                    )}
-
+                                <div className="search-board-button ">
+                                    <ButtonForm text="Ver Perfil" />
+                                </div>
+                            </>
+                        )}
+                    </div>
                 </div>
             </div>
         </form>
