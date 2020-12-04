@@ -14,16 +14,16 @@ type FormState = {
     name: string;
 }
 
+type FormEvent = React.ChangeEvent<HTMLInputElement | HTMLFormElement>;
+
 const Search = () => {
     const [person, setPerson] = useState<Person>();
     const [isLoading, setIsLoading] = useState(false);
-    //const [activePage, setActivePage] = useState(0);
-
     const [formData, setFormData] = useState<FormState>({
         name: ''
     });
 
-    const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleOnChange = (event: FormEvent) => {
         const name = event.target.name;
         const value = event.target.value;
         setFormData(data => ({ ...data, [name]: value }));
@@ -45,15 +45,16 @@ const Search = () => {
 
 
 
+
     return (
-        <form className="search-container" onSubmit={handleSubmit} >
+        <form className="search-container" onSubmit={handleSubmit}  >
             <div className="search-content">
                 <h1 className="search-text">Encontre um perfil Github</h1>
                 <div className="search-input-container">
                     <input type="text" className="search-input" placeholder="Usuário Github"
                         name="name" value={formData.name} onChange={handleOnChange} />
                 </div>
-                <ButtonForm text="Encontrar" />
+                <ButtonForm text="Encontrar"   />
             </div>
             <div className="search-found-container">
                 <div className="search-found-content">
@@ -82,7 +83,7 @@ const Search = () => {
                                     <LabelBoardInfo text="Localidade: " value={person?.location} />
                                 </div>
                                 <div className="search-board-text-member">
-                                    <LabelBoardInfo text="Membro desde: " value={dayjs(person?.created_at).format('DD/MM/YYYY')  } />
+                                    <LabelBoardInfo text="Membro desde: " value={dayjs(person?.created_at).format('DD/MM/YYYY')} />
                                 </div>
                             </div>
                         </>
