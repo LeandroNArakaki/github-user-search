@@ -10,8 +10,12 @@ const LabelBoardInfo = ({ text, value }: Props) => (
 
     <div className="label-board-container">
         <h2 className="label-board-text">
-            {text}{value}
+            {text}
+            <h2 className="label-board-text label-board-text-result">
+                {value}
+            </h2>
         </h2>
+        
     </div>
 );
 

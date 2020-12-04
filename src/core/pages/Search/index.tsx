@@ -82,7 +82,7 @@ const Search = () => {
                                     <LabelBoardInfo text="Localidade: " value={person?.location} />
                                 </div>
                                 <div className="search-board-text-member">
-                                    <LabelBoardInfo text="Membro desde: " value={dayjs(person?.created_at).format('DD/MM/YYYY') } />
+                                    <LabelBoardInfo text="Membro desde: " value={dayjs(person?.created_at).format('DD/MM/YYYY')  } />
                                 </div>
                             </div>
                         </>
