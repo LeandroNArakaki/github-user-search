@@ -47,15 +47,7 @@
     font-family: "Red Hat Display";
 }
 
-.home-container .btn-form {
-     left: 120px;
-     top: 595px;
-     margin-top: 48px;
+.home-content .btn {
+   margin-top: 355px;
  }
 
- .home-container .btn-text {
-    left: 138px;
-    right: 1237px;
-    top: calc(50% - 24px / 2 + 165px);   
-    margin: 8px 18px 8px 18px; 
-}

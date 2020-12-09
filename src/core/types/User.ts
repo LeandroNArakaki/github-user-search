@@ -1,9 +1,4 @@
-export type PersonsResponse = {
-    content: Person[];
-    totalPages: number;
-}
-
-export type Person = {
+export type User = {
     login: string;
     id: number;
     node_id: string;

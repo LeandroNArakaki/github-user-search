@@ -1,7 +1,7 @@
 import ButtonForm from 'core/components/ButtonForm';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './styles.scss';
+import './styles.css';
 
 const Home = () => (
     <div className="home-container" >
