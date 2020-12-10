@@ -7,16 +7,12 @@
 
 .home-content {
     background-color: #fff;
-    padding-top: 179px;
-    padding-left: 120px;
+    margin-left: 120px;
 }
 
 .home-text-title {
-    position: absolute;
     width: 580px;
     height: 128px;
-    left: 120px;
-    top: 179px;
     font-family: "Red Hat Display";
     font-weight: bold;
     font-size: 48px;
@@ -28,11 +24,8 @@
 }
 
 .home-text-subtitle {
-    position: absolute;
     width: 612px;
     height: 216px;
-    left: 120px;
-    top: 331px;
     font-family: "Red Hat Display";
     font-style: normal;
     font-weight: normal;
@@ -48,6 +41,6 @@
 }
 
 .home-content .btn {
-   margin-top: 355px;
+    margin-top: 48px;
  }
 
