@@ -28,10 +28,10 @@ const Search = () => {
         <div className="search-container" >
             <Form onSearch={handleSearch} />
             {isLoading ? (
-                <>
+                <div className="loaders-content">
                     <ImageLoader />
                     <InfoLoader />
-                </>
+                </div>
             ) : (
                     <>
                         {
