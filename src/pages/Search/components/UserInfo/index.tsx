@@ -34,22 +34,22 @@ const UserInfo = ({ user }: Props) => {
                         </span>
                     </div>
                     <div className="user-info-content user-info-item">
-                    <h3 className="user-info-title">
-                        Informações
-                    </h3>
-                    <div className="user-info-details-item user-info-item">
-                        <strong>Empresa: </strong> {user?.company}
+                        <h3 className="user-info-title">
+                            Informações
+                        </h3>
+                        <div className="user-info-details-item user-info-item">
+                            <strong>Empresa: </strong> {user?.company}
+                        </div>
+                        <div className="user-info-details-item user-info-item">
+                            <strong>Website/Blog: </strong> {user?.blog}
+                        </div>
+                        <div className="user-info-details-item user-info-item">
+                            <strong>Localidade: </strong> {user?.location}
+                        </div>
+                        <div className="user-info-details-item user-info-item">
+                            <strong>Membro desde: </strong> {dayjs(user?.created_at).format('DD/MM/YYYY')}
+                        </div>
                     </div>
-                    <div className="user-info-details-item user-info-item">
-                        <strong>Website/Blog: </strong> {user?.blog}
-                    </div>
-                    <div className="user-info-details-item user-info-item">
-                        <strong>Localidade: </strong> {user?.location}
-                    </div>
-                    <div className="user-info-details-item user-info-item">
-                        <strong>Membro desde: </strong> {dayjs(user?.created_at).format('DD/MM/YYYY')}
-                    </div>
-                </div>
                 </div>
             </div>
         </div>
