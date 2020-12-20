@@ -4,7 +4,7 @@
     border-radius: 8px;
     height: 385px;
     padding: 25px;
-    width: 1292px;
+    display: flex;
 }
 
 .user-info-avatar-content {
@@ -15,7 +15,6 @@
     width: 280px;
     height: 280px;
     border-color: #1890ff;
-    margin: 23px 937px 84px 30px;
     display: block;
     margin-bottom: 20px;
 }

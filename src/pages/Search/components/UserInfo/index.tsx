@@ -33,8 +33,7 @@ const UserInfo = ({ user }: Props) => {
                             Seguindo: {user?.following}
                         </span>
                     </div>
-                </div>
-                <div className="user-info-content user-info-item">
+                    <div className="user-info-content user-info-item">
                     <h3 className="user-info-title">
                         Informações
                     </h3>
@@ -50,6 +49,7 @@ const UserInfo = ({ user }: Props) => {
                     <div className="user-info-details-item user-info-item">
                         <strong>Membro desde: </strong> {dayjs(user?.created_at).format('DD/MM/YYYY')}
                     </div>
+                </div>
                 </div>
             </div>
         </div>
